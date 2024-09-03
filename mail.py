@@ -21,7 +21,7 @@ def send_email(to_obj):
     connection.login(user=USER_EMAIL, password=PASSW)
     connection.sendmail(from_addr=USER_EMAIL,
                         to_addrs=to_obj["email"],
-                        msg=msg
+                        msg=f"Subject:Happy birthday!\n\n{msg}"
                         )
     connection.close()
 
